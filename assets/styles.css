@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  --grayish-blue: hsl(229, 8%, 60%);
+  --Very-dark-blue: hsl(229, 31%, 21%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.desktop-navbar {
+  display: none;
+}
+
+header {
+  padding: 2rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*================== hamburger========= */
+.hamburger {
+  width: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px;
+  position: relative;
+  z-index: 150;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .bar {
+  background-color: white;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-12.5px) rotate(-45deg);
+}
+
+.hamburger_login {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ========================================================= */
+
+/* ========== side bar =============================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Sidebar width */
+  width: 250px;
+  height: 100%;
+  background-color: var(--soft-blue);
+  color: white;
+  padding: 15px;
+  transition: right 0.3s ease;
+  z-index: 50; /* Below the menu icon, above content */
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.5); /* Added box shadow */
+}
+
+.sidebar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.sidebar ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  opacity: 0.8;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+/* =================================================== */
+
+login-btn {
+  display: none;
+}
+
+/*================== hero section============================ */
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.hero-subtitle {
+  color: var(--grayish-blue);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.hero-get {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 0.7rem 0.6rem;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  opacity: 0.87;
+}
+
+.chrome {
+  background-color: var(--soft-blue);
+}
+
+.firefox {
+  background-color: white;
+  color: #000;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Added box shadow */
+}
+
+@media screen and (min-width: 768px) {
+  /* ============== nav bar ============================= */
+  .desktop-navbar {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-navbar ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .desktop-navbar ul li {
+    list-style: none;
+  }
+
+  .desktop-navbar ul li a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .desktop-navbar ul li a:hover {
+    opacity: 0.8;
+  }
+
+  .desktop-navbar ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .login-btn {
+    display: inline;
+  }
+
+  .login-btn button {
+    padding: 0.85rem 2rem;
+    background-color: var(--soft-red);
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 4px;
+  }
+
+  .login-btn button:hover {
+    cursor: pointer;
+    opacity: 0.88;
+  }
+  /* ============================================================= */
+
+  /*============== hero section ==========================================  */
+  .hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .hero-img {
+    flex: 1;
+  }
+
+  .hero-description {
+    flex: 1;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .hero-get {
+    justify-content: start;
+  }
+  /* ================================================================ */
+}

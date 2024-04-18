@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Bookmark | Home</title>
+  </head>
+  <body>
+    <main>
+      <!-- header and navigation links -->
+      <header>
+        <nav>
+          <div class="nav-logo">
+            <img src="./assets/images/logo-bookmark.svg" alt="" />
+          </div>
+          <div class="desktop-navbar">
+            <ul>
+              <li><a href="#features">FEATURES</a></li>
+              <li><a href="#pricing">PRICING</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="login-btn">
+              <button>Login</button>
+            </div>
+          </div>
+          <div class="sidebar">
+            <ul>
+              <li><a href="#features">FEATURES</a></li>
+              <li><a href="#pricing">PRICING</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+
+          <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main page Content -->
+      <section class="hero-section">
+        <div class="hero-img">
+          <img src="./assets/images/illustration-hero.svg" alt="" />
+          <img src="./assets/images/" alt="" />
+        </div>
+        <div class="hero-description">
+          <p class="hero-title">A Simple Boomark Manager</p>
+          <p class="hero-subtitle">
+            A clean and simple interface to organize your favorite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="hero-get">
+            <button class="hero-btn chrome">Get it on Chrome</button>
+            <button class="hero-btn firefox">Get it on Firefox</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
