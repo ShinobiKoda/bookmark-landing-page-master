@@ -153,7 +153,7 @@ login-btn {
   padding: 2rem 1.5rem;
 }
 
-.hero-img img {
+img {
   width: 100%;
   height: auto;
 }
@@ -212,14 +212,14 @@ login-btn {
 
 /* ================================================= */
 
-/* =========== features */
-.features-section {
+.section {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 1.5rem;
 }
+/* =========== features */
 
 .features-description {
   color: var(--grayish-blue);
@@ -252,6 +252,128 @@ login-btn {
   border-bottom: 4px solid var(--soft-red);
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
+}
+
+.moreinfo-btn {
+  display: none;
+}
+
+.oneclick-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+}
+
+.download-extension {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.extension-section {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 10px;
+}
+
+.extension-section:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(2px);
+}
+
+.browser-extension {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.extension-section img {
+  width: 130px;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.add-extension {
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+  background-color: var(--soft-blue);
+}
+
+/* accordion */
+.accordion img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.accordion img:hover {
+  opacity: 0.8;
+}
+
+.accordion-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-section .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--grayish-blue);
+  padding: 1rem 0;
+}
+
+.accordion-section .question:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: left;
+  line-height: 1.8;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-bottom: 1rem;
+}
+
+.answer.show {
+  max-height: 300px; /* Adjust this value based on the content size */
+  opacity: 1;
+}
+
+.accordion-section .answer .question {
+  border-bottom: none;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -349,5 +471,40 @@ login-btn {
 
   .bookmarking-options p:first-of-type {
     border-top: none;
+  }
+
+  .download-extension {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .download-extension section:nth-child(2) {
+    margin-top: 3rem;
+  }
+
+  .download-extension section:nth-child(3) {
+    margin-top: 7rem;
+  }
+
+  .oneclick-section {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .oneclick-image {
+    flex: 1;
+  }
+
+  .oneclick-description {
+    flex: 1;
+  }
+
+  /* accordion */
+  .accordion-section {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }

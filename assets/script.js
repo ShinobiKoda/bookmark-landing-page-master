@@ -29,3 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.querySelectorAll(".accordion-arrow").forEach((arrow, index) => {
+  const answer = document.querySelectorAll(".answer")[index];
+  const img = document.querySelectorAll(".rotate")[index];
+  arrow.addEventListener("click", () => {
+    const isOpen = answer.classList.toggle("show");
+    arrow.classList.toggle(isOpen);
+    img.classList.toggle("rotated");
+  });
+});
