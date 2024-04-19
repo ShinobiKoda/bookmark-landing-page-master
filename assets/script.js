@@ -1,11 +1,18 @@
+const hamburger = document.querySelector(".hamburger");
+const sidebar = document.querySelector(".sidebar");
+const sidebar_links = document.querySelectorAll(".sidebar-links");
+
 function toggleMenu() {
-  const hamburger = document.querySelector(".hamburger");
-  const sidebar = document.querySelector(".sidebar");
-  const content = document.querySelector(".content");
   hamburger.classList.toggle("active");
   sidebar.classList.toggle("active");
-  content.classList.toggle("faded");
 }
+
+sidebar_links.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    sidebar.classList.toggle("active");
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const options = document.querySelectorAll(".bookmarking-options p");
