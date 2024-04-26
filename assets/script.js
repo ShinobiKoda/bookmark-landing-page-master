@@ -16,19 +16,35 @@ sidebar_links.forEach((link) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const options = document.querySelectorAll(".bookmarking-options p");
+  const tabs = document.querySelectorAll(".tab");
 
-  options.forEach(function (option) {
+  function hideAllTabs() {
+    tabs.forEach((tab) => tab.classList.remove("show"));
+  }
+
+  options.forEach((option) => {
     option.addEventListener("click", function () {
-      // Remove 'selected' class from all options
-      options.forEach(function (opt) {
-        opt.classList.remove("selected");
-      });
-
-      // Add 'selected' class to the clicked option
+      options.forEach((opt) => opt.classList.remove("selected"));
       this.classList.add("selected");
+
+      hideAllTabs();
+
+      const tabId = this.id.replace("option-", ""); // This should match tab ids
+      const targetTab = document.getElementById(tabId);
+      if (targetTab) {
+        targetTab.classList.add("show");
+      }
     });
   });
+
+  hideAllTabs(); // Ensure all are hidden initially
+  tabs[0].classList.add("show"); // Show the first tab by default
+  options[0].classList.add("selected"); // Select the first option by default
 });
+
+const simple_bookmark = document.getElementById("simple-bookamrking");
+const speed_search = document.getElementById("speedy-searching");
+const easy_sharing = document.getElementById("easy-sharing");
 
 document.querySelectorAll(".accordion-arrow").forEach((arrow, index) => {
   const answer = document.querySelectorAll(".answer")[index];

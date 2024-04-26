@@ -229,11 +229,14 @@ img {
 .bookmarking-options {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
 .bookmarking-options p {
   padding: 1rem 0.6rem;
+  width: 15rem;
 }
 
 .bookmarking-options p:first-of-type {
@@ -254,14 +257,30 @@ img {
   border-bottom-right-radius: 1px;
 }
 
-.moreinfo-btn {
+.tab {
   display: none;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.oneclick-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.tab .title {
+  margin-bottom: 1rem;
+}
+
+.moreinfo-btn {
+  padding: 1rem 2rem;
+  background-color: var(--soft-blue);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.moreinfo-btn:hover {
+  opacity: 0.89;
+  cursor: pointer;
 }
 
 .container {
@@ -376,6 +395,88 @@ h4 {
   transition: transform 0.5s ease;
 }
 
+.show {
+  display: flex;
+}
+
+/* ============= footer =============================== */
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--soft-blue);
+  padding-top: 4rem;
+}
+
+footer .footer-media {
+  display: none;
+}
+
+.footer-joined {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 16px;
+  margin-bottom: 1rem;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact p {
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.footer-contact div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.footer-contact input,
+.footer-contact button {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.footer-contact button {
+  background-color: var(--soft-red);
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer-links {
+  display: none;
+}
+
+.footer-nav {
+  width: 100%;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.footer-logo img {
+  width: 250px;
+}
+
 @media screen and (min-width: 768px) {
   /* ============== nav bar ============================= */
   .desktop-navbar {
@@ -467,6 +568,7 @@ h4 {
     flex-direction: row;
     justify-content: center;
     gap: 0;
+    width: 100%;
   }
 
   .bookmarking-options p:first-of-type {
@@ -489,17 +591,24 @@ h4 {
     margin-top: 7rem;
   }
 
-  .oneclick-section {
+  .tab {
     flex-direction: row-reverse;
     align-items: center;
   }
 
-  .oneclick-image {
+  .tab:nth-child(2),
+  .tab:nth-child(3) {
+    flex-direction: row;
+  }
+
+  .tab-image {
+    width: 100%;
     flex: 1;
   }
 
-  .oneclick-description {
+  .tab-description {
     flex: 1;
+    text-align: left;
   }
 
   /* accordion */

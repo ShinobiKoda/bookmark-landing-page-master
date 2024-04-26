@@ -77,25 +77,57 @@
         </p>
 
         <div class="bookmarking-options">
-          <p class="selected">Simple Bookmarking</p>
-          <p>Speedy searching</p>
-          <p>Easy Sharing</p>
+          <p class="selected" id="option-simple-bookmarking">
+            Simple Bookmarking
+          </p>
+          <p id="option-speedy-searching">Speedy searching</p>
+          <p id="option-easy-sharing">Easy Sharing</p>
         </div>
       </section>
 
       <!-- oraganize section -->
-      <section class="oneclick-section section">
-        <div class="oneclick-image">
-          <img src="./assets/images/illustration-features-tab-1.svg" alt="" />
+      <section class="section">
+        <div class="tab show" id="simple-bookmarking">
+          <div class="tab-image">
+            <img src="./assets/images/illustration-features-tab-1.svg" alt="" />
+          </div>
+          <div class="tab-description">
+            <p class="title">Bookmark in one click</p>
+            <p class="features-description">
+              Organize your bookmarks however you like. Our simple drag and drop
+              interface gives you complete control over how you manage your
+              favorite sites.
+            </p>
+            <button class="moreinfo-btn">More info</button>
+          </div>
         </div>
-        <div class="oneclick-description">
-          <p class="title">Bookmark in one click</p>
-          <p class="features-description">
-            Organize your bookmarks however you like. Our simple drag and drop
-            interface gives you complete control over how you manage your
-            favorite sites.
-          </p>
-          <button class="moreinfo-btn">More info</button>
+
+        <div class="tab" id="speedy-searching">
+          <div class="tab-image">
+            <img src="./assets/images/illustration-features-tab-2.svg" alt="" />
+          </div>
+          <div class="tab-description">
+            <p class="title">Intelligent search</p>
+            <p class="features-description">
+              Our powerful search feature will help you find saved sites in no
+              time at all. No need to trawl through all of your bookmarks.
+            </p>
+            <button class="moreinfo-btn">More info</button>
+          </div>
+        </div>
+
+        <div class="tab" id="easy-sharing">
+          <div class="tab-image">
+            <img src="./assets/images/illustration-features-tab-3.svg" alt="" />
+          </div>
+          <div class="tab-description">
+            <p class="title">Share your bookmarks</p>
+            <p class="features-description">
+              Easily share your bookmarks and collections with others. Create a
+              shareable link that you can send at the click of a button.
+            </p>
+            <button class="moreinfo-btn">More info</button>
+          </div>
         </div>
       </section>
 
@@ -235,8 +267,36 @@
               </p>
             </div>
           </div>
+          <div class="faq-btn">
+            <button class="moreinfo-btn">More info</button>
+          </div>
         </div>
       </section>
+
+      <footer>
+        <p class="footer-joined">35,000+ Already Joined</p>
+        <div class="footer-contact">
+          <p>Stay up-to-date with what we're doing</p>
+          <div>
+            <input type="email" name="" id="" placeholder="Enter your Email" />
+            <button>Contact Us</button>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-logo">
+            <img src="./assets/images/logo-bookmark.svg" alt="" />
+          </div>
+          <div class="footer-links">
+            <p>FEATURES</p>
+            <p>PRICING</p>
+            <p>CONTACT</p>
+          </div>
+          <div class="footer-media">
+            <img src="./assets/images/icon-facebook.svg" alt="" />
+            <img src="./assets/images/icon-twitter.svg" alt="" />
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="./assets/script.js"></script>
   </body>
