@@ -16,7 +16,6 @@
 
 main {
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -25,6 +24,8 @@ main {
 }
 
 header {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
@@ -147,6 +148,8 @@ login-btn {
 
 /*================== hero section============================ */
 .hero-section {
+  max-width: 1440px;
+  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -213,6 +216,8 @@ img {
 /* ================================================= */
 
 .section {
+  max-width: 1440px;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -285,6 +290,8 @@ img {
 
 .container {
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -409,7 +416,7 @@ footer {
   padding-top: 4rem;
 }
 
-footer .footer-media {
+.footer-media {
   display: none;
 }
 
@@ -464,6 +471,7 @@ footer .footer-media {
 
 .footer-nav {
   width: 100%;
+  background-color: var(--Very-dark-blue);
 }
 
 .footer-logo {
@@ -615,5 +623,51 @@ footer .footer-media {
   .accordion-section {
     max-width: 600px;
     margin: 0 auto;
+  }
+
+  .footer-contact div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .footer-media {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-media img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .footer-links p:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-contact input {
+    padding-right: 10rem;
   }
 }
