@@ -136,16 +136,32 @@ nav {
   margin: 0 auto;
 }
 
+.sidebar-login:hover {
+  cursor: pointer;
+}
+
 .sidebar.active {
   right: 0;
 }
 
 /* =================================================== */
 
-login-btn {
+.login-btn {
   display: none;
 }
 
+.sidebar div {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.sidebar img {
+  width: 30px;
+}
 /*================== hero section============================ */
 .hero-section {
   max-width: 1440px;
